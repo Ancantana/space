@@ -14,30 +14,37 @@
       display: flex;
       width: 100%;
     }
+    #write-container {
+      flex: 1;
+      padding: 20px;
+      background-color: #f0f0f0;
+      display: flex;
+      justify-content: center; /* Center the text area */
+      align-items: center;
+    }
     #video-container {
       flex: 1;
       display: flex;
       justify-content: center;
       align-items: center;
     }
-    #write-container {
-      flex: 1;
-      padding: 20px;
-      background-color: #f0f0f0;
-    }
     canvas {
       display: block;
+      max-width: 100%; /* Ensure the camera feed doesn't exceed the container */
+      max-height: 100%;
+    }
+    textarea {
+      width: 100%; /* The text area takes up the full width of the left side */
     }
   </style>
 </head>
 <body>
   <div id="container">
-    <div id="video-container">
-      <video id="captureVideo" autoplay></video>
-      <canvas id="canvas" style="display: none;"></canvas>
-    </div>
     <div id="write-container">
       <textarea id="textInput" rows="10" cols="40"></textarea>
+    </div>
+    <div id="video-container">
+      <video id="captureVideo" autoplay></video>
     </div>
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
