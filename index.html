@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Authentic Sans', sans-serif;
+      display: flex;
+      align-items: center;
+      height: 100vh;
+    }
+    #container {
+      display: flex;
+      width: 100%;
+    }
+    #video-container {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    #write-container {
+      flex: 1;
+      padding: 20px;
+      background-color: #f0f0f0;
+    }
+    canvas {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <div id="video-container">
+      <video id="captureVideo" autoplay></video>
+      <canvas id="canvas" style="display: none;"></canvas>
+    </div>
+    <div id="write-container">
+      <textarea id="textInput" rows="10" cols="40"></textarea>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+  <script src="sketch.js"></script>
+</body>
+</html>
+
